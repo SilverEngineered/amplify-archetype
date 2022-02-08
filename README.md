@@ -26,7 +26,7 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Principal" "*",
+            "Principal": "*",
             "Action": [
                 "s3:GetObject",
                 "s3:PutObject",
@@ -39,7 +39,7 @@
             ],
             "Effect": "Allow"
         },
-        {"Principal" "*",
+        {"Principal": "*",
             "Action": [
                 "s3:PutObject"
             ],
@@ -48,7 +48,7 @@
             ],
             "Effect": "Allow"
         },
-        {"Principal" "*",
+        {"Principal": "*",
             "Action": [
                 "s3:GetObject"
             ],
@@ -57,7 +57,7 @@
             ],
             "Effect": "Allow"
         },
-        {"Principal" "*",
+        {"Principal": "*",
             "Condition": {
                 "StringLike": {
                     "s3:prefix": [
@@ -69,7 +69,7 @@
                         "private/${cognito-identity.amazonaws.com:sub}/*"
                     ]
                 }
-            },"Principal" "*",
+            },
             "Action": [
                 "s3:ListBucket"
             ],
